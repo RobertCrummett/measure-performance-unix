@@ -3,6 +3,8 @@
 #include <time.h>
 #include <math.h>
 
+#include <sys/time.h>
+
 void diff(double *u, int N, double dx, double *du) {
 	int i;
 	du[0] = (u[1] - u[N-1]) / dx / 2;
