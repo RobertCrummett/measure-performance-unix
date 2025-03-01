@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <sys/time.h>
-#include <unistd.h>
 #include <math.h>
 
 void diff(double *u, int N, double dx, double *du) {
@@ -26,6 +24,8 @@ int main(int argc, char** argv) {
 	double *u = malloc(N * sizeof *u);
 	double *du = malloc(N * sizeof *du);
 	double dx = 2. * M_PI / N;
+
+	init(u, N, dx);
 
 	/* clock() function */
 	int i;
